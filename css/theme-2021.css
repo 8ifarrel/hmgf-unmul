@@ -1,0 +1,116 @@
+/* Theme for HMGF 2021 - Dark Blue & Orange */
+
+.navbar {
+    background: linear-gradient(to right, #3D3D3D, #3D3D3D, #3D3D3D, #FFBB70);
+}
+
+#navbar .navbar-nav .nav-link:hover {
+    color: #141E46;
+}
+
+#navbar .dropdown-menu {
+    background: linear-gradient(to right, #3D3D3D, #3D3D3D, #3D3D3D, #FFBB70);
+}
+
+#navbar .dropdown-menu a:hover {
+    background-color: #FFBB70;
+}
+
+.modal-content,
+.modal-body {
+    background-color: #141E46;
+}
+
+.modal-title {
+    background-color: #141E46;
+}
+
+.btn-custom-close {
+    border-color: #E9E7E6;
+    background-color: #FFBB70;
+    color: #E9E7E6; 
+}
+
+.btn-custom-close:hover {
+    border-color: #FFBB70;
+    background-color: #E9E7E6; 
+    color: #141E46; 
+}
+
+#drink {
+    background: linear-gradient(to bottom right, #141E46, #141E46, #FFBB70);
+}
+
+#drink h2 {
+    color: #E9E7E6;
+    font-family: "Kaushan Script", cursive;    
+}
+
+#drink .card-title {
+    color: #141E46;
+}
+
+#drink .card {
+    border-width: 2px; 
+    border-style: solid; 
+    border-color: #FFBB70; 
+}
+
+#drink .card-body {
+    background-color: #E9E7E6;
+}
+
+.btn-primary {
+    background-color: #FFBB70;
+    border-color: #141E46;
+}
+
+#drink .card-body .btn-primary:hover {
+    background-color: #141E46; 
+    border-color: #FFBB70; 
+}
+
+#imf .card,
+#about .card {
+    border-width: 3px;
+    background-color: #FFBB70;
+}  
+
+#imf .card-body,
+#about .card-body {
+    background-color: #141E46;
+}
+
+#imf .card-body .btn-primary,
+#about .card-body .btn-primary {
+    background-color: #FFBB70; 
+    border-color: #E9E7E6; 
+}
+
+#imf .card-body .btn-primary:hover,
+#about .card-body .btn-primary:hover {
+    background-color: #141E46; 
+    border-color: #FFBB70; 
+}
+
+#contact h2,
+#contact p {
+    color: #FFBB70;
+}
+
+.copy-right {
+    color: #141E46; 
+}
+
+.contact-info {
+    color: #FFBB70;
+}
+
+.middle-line {
+    border-top-color: #141E46; 
+}
+
+.copyright {
+    font-family: "Kaushan Script", cursive;
+    color: #FFBB70;
+}

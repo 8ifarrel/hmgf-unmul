@@ -1,0 +1,1033 @@
+/* ========== BOLD DESIGN SYSTEM ========== */
+:root {
+    --transition-fast: all 0.2s ease;
+    --transition-smooth: all 0.3s ease;
+    --shadow-hard: 0 4px 0 rgba(0, 0, 0, 0.3);
+    --shadow-strong: 0 8px 0 rgba(0, 0, 0, 0.25);
+    --radius-sharp: 2px;
+    --radius-medium: 4px;
+}
+
+/* ========== GLOBAL STYLES ========== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #E9E7E6;
+    font-family: 'Kaushan Script', 'Arial Black', sans-serif;
+    overflow-x: hidden;
+    letter-spacing: 0.5px;
+}
+
+/* ========== STRONG NAVBAR ========== */
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #3D3D3D !important;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4);
+    transition: var(--transition-fast);
+    border-bottom: 3px solid #000;
+}
+
+.navbar:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+#navbar img {
+    margin-right: 12px;
+    width: 50px;
+    height: 50px;
+}
+
+#navbar .navbar-nav .nav-link {
+    font-family: "Kaushan Script", cursive;
+    color: #E9E7E6;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 24px;
+    margin: 0 4px;
+    transition: var(--transition-fast);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+#navbar .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+#navbar .navbar-brand {
+    font-family: "Kaushan Script", cursive;
+    color: #E9E7E6;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#navbar .navbar-toggler {
+    border: 3px solid #fff;
+    padding: 8px 12px;
+}
+
+#navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+#navbar .navbar-toggler-icon {
+    color: #fff;
+}
+
+/* Force white hamburger icon */
+.navbar-light .navbar-toggler-icon,
+#navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  background-size: 1.5em 1.5em; /* keep Bootstrap scale */
+  background-color: transparent;
+}
+
+#navbar .dropdown-menu {
+    border: 3px solid #000;
+    border-radius: 0;
+    box-shadow: var(--shadow-hard);
+    padding: 8px;
+    margin-top: 12px;
+}
+
+#navbar .dropdown-menu a {
+    font-family: "Kaushan Script", cursive;
+    color: #E9E7E6;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 20px;
+    transition: var(--transition-fast);
+    margin: 4px 0;
+    border-left: 4px solid transparent;
+    text-transform: uppercase;
+}
+
+#navbar .dropdown-menu a:hover {
+    border-left-color: currentColor;
+    padding-left: 28px;
+}
+
+/* Navbar: group logos on the left, hamburger on the right */
+#navbar {
+  justify-content: flex-start; /* override Bootstrap's space-between */
+}
+
+#navbar .navbar-toggler {
+  margin-left: auto; /* push toggler to the far right */
+}
+
+/* ========== BOLD VIDEO SECTION ========== */
+video {
+    width: 100%;
+    height: auto;
+    border: 5px solid #3D3D3D;
+    box-shadow: var(--shadow-strong);
+}
+
+/* ========== STRONG SECTION STYLES ========== */
+#about {
+    position: relative;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(61, 61, 61, 0.05) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Logo container with strong layout */
+#about .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about .pengertian-container {
+    padding: 80px 0;
+}
+
+#about .logo-image {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 0 rgba(0, 0, 0, 0.3));
+    border: 5px solid #3D3D3D;
+    padding: 20px;
+    background: white;
+}
+
+#about .launching-container {
+    width: 100%;
+    padding: 80px 40px;
+    border: 5px solid #000;
+    box-shadow: var(--shadow-strong);
+    position: relative;
+    overflow: hidden;
+}
+
+#about .launching-container h2 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 80px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 24px;
+}
+
+#about .launching-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: currentColor;
+}
+
+#about .launching-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    object-fit: cover;
+    border: 4px solid #000;
+    box-shadow: var(--shadow-hard);
+    margin: 0 auto;
+    display: block;
+}
+
+/* ========== PENGURUS INTI ========== */
+
+.pengurus-inti {
+    padding: 80px 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* Responsive grid for pengurus inti */
+@media (max-width: 992px) {
+    .pengurus-inti {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pengurus-inti {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Pengurus Inti: laptop/desktop container cap (match departemen feel) */
+@media (min-width: 992px) {
+  #about .pengurus-inti {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  #about .pengurus-inti { max-width: 1100px; }
+}
+@media (min-width: 1600px) {
+  #about .pengurus-inti { max-width: 1120px; }
+}
+
+/* Pengurus Inti: sizing to mirror departemen cards */
+@media (min-width: 992px) and (max-width: 1366px) {
+  #about .pengurus-inti { gap: 28px; }
+  #about .pengurus-inti .card-body { padding: 20px; }
+  #about .pengurus-inti .card-title { font-size: 20px; }
+}
+@media (min-width: 1367px) {
+  #about .pengurus-inti { gap: 32px; }
+  #about .pengurus-inti .card-body { padding: 22px; }
+  #about .pengurus-inti .card-title { font-size: 21px; }
+}
+
+/* ========== BOLD CARDS ========== */
+.card {
+    border: 3px solid #3D3D3D;
+    border-radius: 0;
+    overflow: hidden;
+    background: white;
+    box-shadow: var(--shadow-hard);
+    height: 100%;
+}
+
+.card-img-top {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-bottom: 3px solid #3D3D3D;
+}
+
+.card-body {
+    padding: 24px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+}
+
+.card-title {
+    font-family: "Kaushan Script", cursive;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* Hover effects only for cards NOT in about section */
+#drink .card,
+#proker .card {
+    transition: var(--transition-fast);
+}
+
+#drink .card:hover,
+#proker .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 0 rgba(0, 0, 0, 0.4);
+    border-color: #000;
+}
+
+#drink .card-img-top,
+#proker .card-img-top {
+    transition: var(--transition-fast);
+}
+
+#drink .card:hover .card-img-top,
+#proker .card:hover .card-img-top {
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* ========== STRONG BUTTONS ========== */
+.btn-primary {
+    border: 3px solid #000;
+    border-radius: 0;
+    padding: 12px 32px;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: var(--transition-fast);
+    position: relative;
+    box-shadow: var(--shadow-hard);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* ========== BOLD MODAL ========== */
+.modal {
+    z-index: 1050;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+}
+
+.modal-content {
+    border: 4px solid #000;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    pointer-events: auto;
+}
+
+/* Prevent event bubbling issues */
+.modal-dialog {
+    pointer-events: none;
+}
+
+.modal-dialog > .modal-content {
+    pointer-events: auto;
+}
+
+.modal-dialog {
+    max-width: 800px;
+}
+
+.modal-header {
+    border: none;
+    border-bottom: 3px solid #000;
+    padding: 32px 40px;
+    background: #3D3D3D;
+}
+
+.modal-title {
+    color: #E9E7E6;
+    font-family: "Kaushan Script", cursive;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.modal-body {
+    padding: 40px;
+    background: #2d2d2d;
+}
+
+.modal-body .profile-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.modal-body .profile-image {
+    width: 100%;
+    height: auto;
+    border: 4px solid #9F0D0F;
+    box-shadow: var(--shadow-hard);
+}
+
+.modal-body .profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-body .info-item {
+    margin-bottom: 16px;
+    padding: 12px 20px;
+    background: rgba(159, 13, 15, 0.1);
+    border-left: 4px solid #9F0D0F;
+}
+
+.modal-body .info-label {
+    font-weight: 900;
+    color: #9F0D0F;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.modal-body .info-value {
+    font-weight: 700;
+    color: #E9E7E6;
+    font-size: 18px;
+}
+
+.modal-body .section-title {
+    font-weight: 900;
+    color: #9F0D0F;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 32px 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #9F0D0F;
+}
+
+.modal-body .content-text {
+    font-weight: 600;
+    color: #E9E7E6;
+    line-height: 2;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.modal-body .content-text::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: #9F0D0F;
+    font-size: 12px;
+}
+
+.modal-body .proker-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.modal-body .proker-item {
+    padding: 12px 20px;
+    margin-bottom: 12px;
+    background: rgba(61, 61, 61, 0.5);
+    border-left: 4px solid #9F0D0F;
+    color: #E9E7E6;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.modal-body .proker-item:hover {
+    background: rgba(159, 13, 15, 0.2);
+    transform: translateX(8px);
+}
+
+.modal-body .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.modal-body .gallery-item {
+    border: 3px solid #9F0D0F;
+    overflow: hidden;
+    transition: var(--transition-fast);
+}
+
+.modal-body .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 0 #9F0D0F;
+}
+
+.modal-body .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border: none;
+    margin: 0;
+}
+
+.modal-footer {
+    border: none;
+    border-top: 3px solid #000;
+    padding: 24px 40px;
+    background: #3D3D3D;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .modal-body .profile-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .modal-body .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .modal-title {
+        font-size: 24px;
+    }
+}
+
+/* ========== STRONG SECTIONS ========== */
+#drink {
+    padding: 100px 40px;
+    border: 5px solid #000;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-strong);
+    width: 100%;
+}
+
+#drink h2 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 80px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 24px;
+}
+
+#drink h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: currentColor;
+}
+
+/* Modern Grid System for Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+/* For 3 columns specifically */
+.card-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive grid */
+@media (max-width: 992px) {
+    .card-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-grid,
+    .card-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Remove old Bootstrap-specific spacing */
+#drink .col-md-4 {
+    margin-bottom: 0;
+}
+
+/* Remove excessive padding on inner grid rows used as containers */
+#drink .row.p-5,
+#drink #psdm {
+  padding: 0 !important;
+}
+
+/* Desktop/laptop: control spacing via inner container, keep #drink full-width */
+@media (min-width: 992px) {
+  #drink {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  #drink .section-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  /* keep inner grids full width inside the inner cap */
+  #drink .card-grid,
+  #drink .card-grid-3 {
+    max-width: none !important;
+    margin: 0;
+  }
+}
+
+/* Larger desktops: keep readable width via inner wrapper */
+@media (min-width: 1200px) {
+  #drink .section-inner { max-width: 1100px; }
+}
+@media (min-width: 1600px) {
+  #drink .section-inner { max-width: 1120px; }
+}
+
+/* Remove Bootstrap margin from cards inside department grids; use grid gap instead */
+#drink .card.mb-4 { margin-bottom: 0 !important; }
+
+/* Department cards: laptop/desktop tuning so sizes match homepage feel */
+@media (min-width: 992px) and (max-width: 1366px) {
+  #drink .card-grid-3 { gap: 28px; }          /* slightly tighter gap */
+  #drink .card-body { padding: 20px; }        /* reduce inner padding */
+  #drink .card-title { font-size: 20px; }     /* tone down title size */
+}
+
+/* Large desktop: keep crisp spacing but not too loose */
+@media (min-width: 1367px) {
+  #drink .card-grid-3 { gap: 32px; }          /* balanced gap on bigger screens */
+  #drink .card-body { padding: 22px; }
+  #drink .card-title { font-size: 21px; }
+}
+
+/* ========== CONTACT SECTION ========== */
+#contact {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#contact img {
+    margin: 0 16px;
+}
+
+.contact-info {
+    font-family: "Kaushan Script", cursive;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.copy-right {
+    font-weight: 900;
+    font-size: 22px;
+}
+
+/* ========== STRONG DIVIDER ========== */
+.middle-line {
+    border: none;
+    height: 4px;
+    background: currentColor;
+    margin: 48px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ========== PROKER SECTION ========== */
+#proker {
+    border: 5px solid #000;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-strong);
+}
+
+#proker h5 {
+    font-size: 56px; /* match #drink h2 on desktop */
+}
+
+/* Laptop/desktop: tune horizontal padding (keep full-width background) */
+@media (min-width: 992px) {
+  #proker { padding-left: 56px; padding-right: 56px; }
+}
+@media (min-width: 1200px) {
+  #proker { padding-left: 72px; padding-right: 72px; }
+}
+@media (min-width: 1600px) {
+  #proker { padding-left: 96px; padding-right: 96px; }
+}
+
+/* Program Kerja gallery blocks */
+#proker .gallery-grid {
+  /* switch to flex so last row centers */
+  --gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  justify-content: center; /* center last row */
+  margin-top: 16px;
+}
+/* 3 items per row on desktop */
+#proker .gallery-item {
+  flex: 0 1 calc((100% - (2 * var(--gap))) / 3);
+  border: 3px solid #000;
+  box-shadow: var(--shadow-hard);
+  overflow: hidden;
+  background: #fff;
+}
+#proker .gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border: 0;
+}
+
+/* Program Kerja: gallery polish */
+#proker .gallery-grid { margin-top: 8px; }
+#proker .gallery-item {
+  position: relative;
+  /* keep existing visuals */
+  transition: var(--transition-fast);
+}
+#proker .gallery-item img {
+  height: clamp(180px, 24vw, 260px);
+  transition: var(--transition-fast);
+}
+#proker .gallery-item:hover img {
+  transform: scale(1.05);
+}
+#proker .gallery-item::after {
+  content: '+';
+  position: absolute;
+  right: 8px;
+  bottom: 6px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-weight: 900;
+  padding: 6px 10px;
+  line-height: 1;
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+#proker .gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  #proker .gallery-grid { --gap: 14px; gap: var(--gap); }
+  /* 2 items per row */
+  #proker .gallery-item { flex: 0 1 calc((100% - var(--gap)) / 2); }
+  #proker .gallery-item img { height: 180px; }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  #proker .gallery-grid { --gap: 10px; gap: var(--gap); }
+  /* 1 item per row */
+  #proker .gallery-item { flex: 0 1 100%; }
+  #proker .gallery-item img { height: 160px; }
+}
+
+/* Extra small */
+@media (max-width: 400px) {
+    #navbar img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #about .launching-container h2 {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    #drink h2 {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    #contact h2 {
+        font-size: 20px;
+    }
+
+    .contact-info {
+        font-size: 12px;
+    }
+
+    #proker h5 {
+        font-size: 28px; /* same as #drink h2 */
+    }
+
+    .modal-title {
+        font-size: 16px;
+    }
+
+    .modal-body .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-body .gallery-item img {
+        height: 200px;
+    }
+
+    .card-img-top {
+        aspect-ratio: 3/4;
+        min-height: 260px;
+    }
+
+    .card-body {
+        padding: 18px;
+        min-height: 140px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .btn-primary {
+        padding: 10px 24px;
+        font-size: 12px;
+    }
+
+    .card-grid,
+    .card-grid-3 {
+        max-width: 350px;
+        gap: 28px;
+    }
+
+    .pengurus-inti {
+        max-width: 350px;
+        gap: 28px;
+    }
+}
+
+/* Landscape orientation fix */
+@media (max-height: 500px) and (orientation: landscape) {
+    .modal-dialog {
+        margin: 10px auto;
+    }
+
+    .modal-body {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .modal-body .gallery-item img {
+        height: 150px;
+    }
+}
+
+/* ========== UTILITY CLASSES ========== */
+.title {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 900;
+    font-size: 20px;
+    display: inline-block;
+    padding: 12px 24px;
+    background: #fff;
+    border: 3px solid #000;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: var(--shadow-hard);
+}
+
+/* ========== SMOOTH SCROLL OFFSET ========== */
+section {
+    scroll-margin-top: 100px;
+}
+
+/* ========== STRONG TYPOGRAPHY ========== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* ========== LIST ITEMS ========== */
+.list-group-item {
+    font-family: "Kaushan Script", cursive;
+    color: #000;
+    font-weight: 700;
+    border: 2px solid #3D3D3D;
+    margin-bottom: 4px;
+}
+
+/* ========== RESPONSIVE OVERHAUL (MOBILE-FIRST) ========== */
+
+/* Base mobile (<= 576px) */
+@media (max-width: 576px) {
+  /* Base text scale */
+  body { font-size: 16px; line-height: 1.6; }
+
+  /* Navbar */
+  .navbar { padding: 14px 16px !important; }
+  #navbar img { width: 42px; height: 42px; margin-right: 8px; }
+  #navbar .navbar-nav .nav-link { padding: 12px 14px; font-size: 15px; }
+  #navbar .dropdown-menu { width: 100%; min-width: auto; }
+  #navbar .dropdown-menu a { font-size: 14px; padding: 12px 16px; }
+
+  /* Headings */
+  #about .launching-container h2,
+  #drink h2 { font-size: 28px; margin-bottom: 24px; }
+  #about .launching-container h2::after,
+  #drink h2::after { height: 3px; }
+
+  /* Grids: full width, 1 column, no caps */
+  .pengurus-inti,
+  .card-grid,
+  .card-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 16px;
+    max-width: none;
+    width: 100%;
+  }
+
+  /* Cards */
+  .card { border-width: 2px; }
+  .card-img-top {
+    width: 100%;
+    height: clamp(240px, 70vw, 320px);
+    aspect-ratio: auto;
+    object-fit: cover;
+    border-bottom-width: 2px;
+  }
+  .card-body { padding: 20px; gap: 12px; min-height: auto; }
+  .card-title { font-size: 20px; margin-bottom: 10px; line-height: 1.3; }
+  .btn-primary {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-width: 2px;
+  }
+
+  /* Sections */
+  #drink { padding: 36px 16px; border-width: 2px; }
+  #contact { padding: 40px 16px; }
+  #contact h2 { font-size: 26px; margin-bottom: 20px; }
+  #contact img { height: 44px; width: auto; margin: 0 8px; }
+
+  /* Modal */
+  .modal-dialog { margin: 12px; max-width: calc(100% - 24px); }
+  .modal-header { padding: 18px 16px; }
+  .modal-title { font-size: 18px; }
+  .modal-body { padding: 18px 16px; }
+  .modal-body .profile-section { grid-template-columns: 1fr; gap: 14px; }
+  .modal-body .profile-image { max-width: 260px; border-width: 2px; margin: 0 auto; }
+  .modal-body .info-item { padding: 10px 12px; }
+  .modal-body .info-label { font-size: 12px; }
+  .modal-body .info-value { font-size: 15px; }
+  .modal-body .section-title { font-size: 18px; margin: 18px 0 12px; }
+  .modal-body .content-text { font-size: 14px; line-height: 1.8; }
+  .modal-footer { padding: 12px 16px; }
+  .btn-custom-close { padding: 8px 18px; font-size: 13px; }
+
+  /* Remove unintended width caps from earlier rules */
+  .card-grid,
+  .card-grid-3,
+  .pengurus-inti { max-width: none !important; }
+}
+
+/* Small tablets (577px–768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  body { font-size: 16px; }
+  #navbar img { width: 44px; height: 44px; }
+  #navbar .navbar-nav .nav-link { font-size: 15px; padding: 12px 16px; }
+  #navbar .dropdown-menu a { font-size: 14px; padding: 12px 16px; }
+
+  .card-grid,
+  .card-grid-3,
+  .pengurus-inti { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+
+  .card-img-top { height: clamp(240px, 42vw, 320px); }
+  .card-title { font-size: 20px; }
+  .btn-primary { font-size: 13px; padding: 12px 20px; }
+
+  #about .launching-container h2,
+  #drink h2 { font-size: 30px; margin-bottom: 26px; }
+}
+
+/* Tablets (769px–992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  #navbar .navbar-nav .nav-link { font-size: 16px; }
+  .card-title { font-size: 22px; }
+  .btn-primary { font-size: 14px; padding: 12px 22px; }
+}
+
+/* Mobile: remove logo-container padding to keep bg color clean */
+@media (max-width: 576px) {
+  #about .logo-container {
+    padding: 0 !important;
+  }
+}

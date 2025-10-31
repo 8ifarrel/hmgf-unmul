@@ -1,0 +1,261 @@
+/* ========== BOLD THEME 2024 - Strong Red & Dark ========== */
+
+/* Strong Navbar */
+.navbar {
+    background: linear-gradient(90deg, #2d2d2d 0%, #3D3D3D 50%, #9F0D0F 100%) !important;
+    border-bottom: 4px solid #9F0D0F;
+}
+
+#navbar .navbar-nav .nav-link:hover {
+    color: #9F0D0F;
+}
+
+#navbar .navbar-brand:hover {
+    color: #9F0D0F;
+}
+
+#navbar .dropdown-menu {
+    background: linear-gradient(to right, #3D3D3D, #3D3D3D, #3D3D3D, #9F0D0F);
+    border-color: #9F0D0F;
+}
+
+#navbar .dropdown-menu a:hover {
+    background: #9F0D0F;
+    color: #fff;
+}
+
+/* Bold Modal */
+.modal-header {
+    background: linear-gradient(135deg, #3D3D3D 0%, #2d2d2d 100%);
+    border-bottom-color: #9F0D0F;
+}
+
+.modal-body {
+    background: #2d2d2d;
+}
+
+.modal-footer {
+    background: #3D3D3D;
+    border-top-color: #9F0D0F;
+}
+
+.btn-custom-close {
+    border-color: #9F0D0F;
+    background: #9F0D0F;
+    color: #fff;
+}
+
+.btn-custom-close:hover {
+    background: #fff;
+    color: #9F0D0F;
+    border-color: #fff;
+}
+
+/* Strong Drink Section */
+#drink {
+    background: linear-gradient(135deg, #9F0D0F 0%, #3D3D3D 100%);
+    border-color: #9F0D0F;
+}
+
+#drink h2 {
+    color: #fff;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+#drink .card-title {
+    color: #2d2d2d;
+}
+
+#drink .card {
+    border-color: #9F0D0F;
+}
+
+#drink .card:hover {
+    border-color: #3D3D3D;
+}
+
+#drink .card-body {
+    background-color: #fff;
+}
+
+.btn-primary {
+    background: #9F0D0F;
+    border-color: #000;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #3D3D3D;
+    border-color: #9F0D0F;
+    color: #fff;
+}
+
+/* About Section */
+
+#about .launching-container {
+    background: linear-gradient(135deg, #9F0D0F 0%, #3D3D3D 50%, #2d2d2d 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+#about .launching-container h2 {
+    color: #fff;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+#about .card {
+    border-color: #9F0D0F;
+    background: #9F0D0F;
+}
+
+#about .card-body {
+    background: #3D3D3D;
+}
+
+#about .card-body .btn-primary {
+    background: #9F0D0F;
+    border-color: #fff;
+}
+
+#about .card-body .btn-primary:hover {
+    background: #fff;
+    color: #9F0D0F;
+    border-color: #9F0D0F;
+}
+
+/* Remove hover effects from about section images */
+#about .logo-image,
+#about .launching-image {
+    transition: none;
+}
+
+#about .logo-image:hover,
+#about .launching-image:hover {
+    transform: none;
+    box-shadow: none;
+    filter: none;
+}
+
+/* Keep original styles for images */
+#about .launching-image {
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+#about .logo-image {
+    filter: drop-shadow(0 8px 0 rgba(0, 0, 0, 0.3));
+}
+
+/* About Section - Pengurus Inti Cards */
+#about .pengurus-inti .card {
+    border-color: #9F0D0F;
+    background: #9F0D0F;
+    transition: var(--transition-fast);
+}
+
+#about .pengurus-inti .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 0 rgba(159, 13, 15, 0.4);
+    border-color: #9F0D0F;
+}
+
+#about .pengurus-inti .card-img-top {
+    border-bottom-color: #9F0D0F;
+    transition: var(--transition-fast);
+}
+
+#about .pengurus-inti .card:hover .card-img-top {
+    filter: brightness(1.1) contrast(1.1);
+}
+
+#about .pengurus-inti .card-body {
+    background: #3D3D3D;
+}
+
+#about .pengurus-inti .card-title {
+    color: #fff;
+}
+
+#about .pengurus-inti .btn-primary {
+    background: #fff;
+    color: #9F0D0F;
+    border: 3px solid #9F0D0F;
+}
+
+#about .pengurus-inti .btn-primary:hover {
+    background: #E9E7E6;
+    color: #9F0D0F;
+    border-color: #9F0D0F;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 0 rgba(159, 13, 15, 0.4);
+}
+
+/* Contact Section */
+#contact h2,
+#contact p {
+    color: #9F0D0F;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.copy-right {
+    color: #3D3D3D;
+}
+
+.contact-info {
+    color: #9F0D0F;
+}
+
+.middle-line {
+    background: #9F0D0F;
+    box-shadow: 0 2px 0 rgba(159, 13, 15, 0.3);
+}
+
+/* Proker Section */
+#proker {
+    border-color: #9F0D0F;
+}
+
+#proker h5 {
+    color: #9F0D0F;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+#proker a {
+    color: #fff;
+}
+
+#proker p {
+    color: #fff;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+#proker .middle-line {
+    background: #fff;
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+#proker img {
+    border-color: #fff;
+}
+
+.title {
+    color: #9F0D0F;
+    background: #fff;
+    border-color: #9F0D0F;
+}
+
+/* Card Image Border */
+.card-img-top {
+    border-bottom-color: #9F0D0F;
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#drink, #proker, #about .launching-container {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
