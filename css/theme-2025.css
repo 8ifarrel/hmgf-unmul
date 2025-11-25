@@ -51,6 +51,17 @@
     border-color: #fff;
 }
 
+/* === 2025 Theme: White modal surfaces & black primary text === */
+.modal-header,
+.modal-body,
+.modal-footer {
+  background: #fff !important;
+}
+
+.modal-title { color: #000 !important; }
+
+/* Retain blue accent elements already defined */
+
 /* Strong Drink Section */
 #drink {
     background: linear-gradient(135deg, #2E4156 0%, #3D3D3D 100%);
@@ -258,4 +269,47 @@
 #drink, #proker, #about .launching-container {
     background-size: 200% 200%;
     animation: gradientShift 15s ease infinite;
+}
+
+/* ========== MODAL BLUE ACCENT OVERRIDES (replace red from main.css) ========== */
+.modal-body .profile-image { border-color: #2E4156; }
+.modal-body .info-item {
+  background: rgba(46, 65, 86, 0.10);
+  border-left-color: #2E4156;
+}
+.modal-body .info-label { color: #2E4156; }
+.modal-body .section-title {
+  color: #2E4156;
+  border-bottom-color: #2E4156;
+}
+.modal-body .content-text::before { color: #2E4156; }
+
+.modal-body .proker-item {
+  border-left-color: #2E4156;
+  background: rgba(46, 65, 86, 0.15);
+}
+.modal-body .proker-item:hover {
+  background: rgba(46, 65, 86, 0.25);
+}
+
+.modal-body .gallery-item {
+  border-color: #2E4156;
+  box-shadow: 0 4px 0 rgba(46, 65, 86, 0.3);
+}
+.modal-body .gallery-item:hover {
+  box-shadow: 0 8px 0 rgba(46, 65, 86, 0.4);
+}
+
+/* Ensure modal header line matches accent */
+.modal-header { border-bottom-color: #2E4156; }
+
+/* Fine-tune close button to stay in blue theme */
+.btn-custom-close {
+  background: #2E4156;
+  border-color: #2E4156;
+}
+.btn-custom-close:hover {
+  background: #fff;
+  color: #2E4156;
+  border-color: #2E4156;
 }
